@@ -1,0 +1,59 @@
+MungeRawData_Virtually.py
+#1: Install & Imports
+
+pip3 install piplite['pandas']
+from pyodide import pyfetch
+import requests
+
+#2: Function to download file 
+urls = inputs('please select a url to download datas:' <str>)
+
+Asyncio def download_file(url,'filename'):
+    response = await pyfetch('filename')
+    if response.status == 200: 
+    with open('filename', 'r') as Q:
+    downloaded_data = Q.writes(await bytes().decode('utf-8).to_json()
+
+#3: Create a dataFrame object
+
+Datas = pd.read_json('downloaded_data.json', header = true)
+
+#4: Create a function to clean raw data, Wrap it inside  while true function to help with debuggin
+Def clean_data() --> str, int:
+    While true: 
+    Try:
+    
+        describe = datas.describe()
+        if " for all datas" in describe: 
+        describe.get_item(['?',' ']).sum() < 0 ||
+        describe.isna(axis=1).sum() < 0 || describe.isnull(axis=1).sum < 0
+        clean_datas = describe.replace(['?', ' '], pd.nan, inplace = true) & describe.dropna() & describe.drop_isnull()  
+    
+    return(clean_datas)
+    
+    Error as er: 
+    Pass 
+    
+    
+#4 EDA (to further group data and explore datas) 
+   Def EDA_exploration()--> int: 
+        While true:
+        Try: 
+        ##get columns information
+            clean_datas.columns()
+        
+            grouped_data = clean_datas.group_by(['colName']).mean())
+            clean_grouped_data = grouped_data.del('UnwantedCols').sum()
+            grouped_data(index=true) 
+        
+        Error as er:
+            pass
+
+
+       
+        
+            
+
+    
+   
+
