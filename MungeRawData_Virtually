@@ -23,7 +23,7 @@ Def clean_data() --> str, int:
     While true: 
     Try:
     
-        describe = datas.describe()
+        describe = datas.describe(include=all)
         if " for all datas" in describe: 
         describe.get_item(['?',' ']).sum() < 0 ||
         describe.isna(axis=1).sum() < 0 || describe.isnull(axis=1).sum < 0
