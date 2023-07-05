@@ -41,12 +41,14 @@ Def clean_data() --> str, int:
         While true:
         Try: 
         ##get columns information
-            clean_datas.columns()
+        __Super__.clean_datas.columns(usecols=[:])
         
-            grouped_data = clean_datas.group_by(['colName']).mean())
-            clean_grouped_data = grouped_data.del('UnwantedCols').sum()
-            grouped_data(index=true) 
-        
+        grouped_data = clean_datas.group_by(['colName']).mean())
+        clean_grouped_data = grouped_data.del('UnwantedCols').sum()
+        grouped_data(index=true) 
+        columns = ['columns_name','col#']
+        Clean_datas.columns = columns(index=true)
+                
         Error as er:
             pass
 
