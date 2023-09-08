@@ -11,29 +11,29 @@ urls = inputs('please select a url to download datas:' <str>)
 
 Asyncio def download_file(url,'filename'):
     response = await pyfetch('filename')
-    if response.status == 200: 
+    if response.status == 200 else Raise reponse.error(): 
     with open('filename', 'r') as Q:
     downloaded_data = Q.writes(await bytes().decode('utf-8).to_json()
 
 #3: Create a dataFrame object
 
-Datas = pd.read_json('downloaded_data.json', header = true)
+Datas = pd.read_json('downloaded_data.json', header = True, has_index = True)
 
 #4: Create a function to clean raw data, Wrap it inside  while true function to help with debuggin
-Def clean_data() --> str, int:
+Def Clean_data(Describe:list[int,str], *args, **Kwargs) --> str, int:
     While true: 
-    Try:
-    
+    Try
+
         describe = datas.describe(include=all)
         if " for all datas" in describe: 
         describe.get_item(['?',' ']).sum() &&
-        describe.isna(axis=1).sum() && describe.isnull(axis=1).sum < 0
-        clean_datas = describe.replace(['?', ' '], pd.nan, inplace = true) & describe.dropna() & describe.drop_isnull()  
+        describe.isna(axis=1).sum() && describe.isnull(axis=1).sum < 0 
+        clean_datas = describe.replace(['?', ' '], pd.nan, inplace = true) && describe.dropna() && describe.drop_isnull()  
     ## Could also describe.fillna() 
-    return(clean_datas)
+        return(clean_datas)
     
-    Error as er: 
-    Pass 
+    Except Exception as er: 
+        Pass 
     
     
 #4 EDA (to further group data and explore datas) 
@@ -41,13 +41,13 @@ Def clean_data() --> str, int:
         While true:
         Try: 
         ##get columns information
-        __Super__.clean_datas.columns(usecols=[:])
+            Super().clean_datas.columns(usecols=[:])
         
-        grouped_data = clean_datas.group_by(['colName']).mean())
-        clean_grouped_data = grouped_data.del('UnwantedCols').sum()
-        grouped_data(index=true) 
-        columns = ['columns_name','col#']
-        Clean_datas.columns = columns(index=true)
+             grouped_data = clean_datas.group_by(['colName']).mean())
+            clean_grouped_data = grouped_data.del('UnwantedCols').sum()
+            grouped_data(index=true) 
+            columns = [['columns_name','col#']]
+            Clean_datas.columns = columns(index=true)
                 
         Error as er:
             pass
