@@ -41,7 +41,7 @@ Def Clean_data(Describe:list[int,str], *args, **Kwargs) --> str, int:
         While true:
         Try: 
         ##get columns information
-            Super().clean_datas.columns(usecols=[:])
+            super().clean_datas.columns(usecols=[:])
         
              grouped_data = clean_datas.group_by(['colName']).mean())
             clean_grouped_data = grouped_data.del('UnwantedCols').sum()
